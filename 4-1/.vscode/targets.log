@@ -7,10 +7,10 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 
 # This program built for i386-apple-darwin11.3.0
  
-make: *** No rule to make target `all'.  Stop.
+make: *** No rule to make target `src/main.o', needed by `main'.  Stop.
 
 
-# Make data base, printed on Wed Aug  3 09:42:35 2022
+# Make data base, printed on Wed Aug  3 15:10:53 2022
 
 # Variables
 
@@ -20,30 +20,47 @@ make: *** No rule to make target `all'.  Stop.
 ?F = $(notdir $?)
 # environment
 ELECTRON_NO_ATTACH_CONSOLE = 1
+# makefile (from `Makefile', line 21)
+SRC := src
 # automatic
+ 
 ?D = $(patsubst %/,%,$(dir $?))
+# makefile (from `Makefile', line 48)
+INCLUDES := -Iinclude
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # automatic
 @F = $(notdir $@)
 # makefile
-CURDIR := /Users/bowtiemay/Desktop/prjs/CPP-Programming
+CURDIR := /Users/bowtiemay/Desktop/prjs/CPP-Programming/4-1
 # makefile
 SHELL = /bin/sh
+# makefile (from `Makefile', line 43)
+RM = rm -f
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
 _ = /usr/bin/make
-# makefile
-MAKEFILE_LIST := 
+# makefile (from `Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
+# makefile (from `Makefile', line 54)
+SOURCES := src/main.cpp
+# makefile (from `Makefile', line 10)
+CXXFLAGS := -std=c++17 -Wall -Wextra -g
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
 VSCODE_CWD = /Users/bowtiemay/Desktop/prjs/CPP-Programming
 # environment
 PATH = /Users/bowtiemay/miniforge3/bin:/Users/bowtiemay/miniforge3/condabin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+# makefile (from `Makefile', line 44)
+MD := mkdir -p
+# makefile (from `Makefile', line 41)
+LIBDIRS := lib
 # environment
 ELECTRON_RUN_AS_NODE = 1
+# makefile (from `Makefile', line 27)
+LIB := lib
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
@@ -53,7 +70,9 @@ SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.ojk0lWZGru/Listeners
 # environment
 CONDA_EXE = /Users/bowtiemay/miniforge3/bin/conda
 # environment
-PWD = /Users/bowtiemay/Desktop/prjs/CPP-Programming
+PWD = /Users/bowtiemay/Desktop/prjs/CPP-Programming/4-1
+# makefile (from `Makefile', line 65)
+OUTPUTMAIN := output/main
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
 # environment
@@ -72,6 +91,8 @@ LOGNAME = bowtiemay
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
 CONDA_PROMPT_MODIFIER = (base) 
+# makefile (from `Makefile', line 40)
+INCLUDEDIRS := include
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
@@ -86,16 +107,24 @@ MAKE = $(MAKE_COMMAND)
 MAKECMDGOALS := all
 # environment
 SHLVL = 3
+# makefile (from `Makefile', line 42)
+FIXPATH = $1
 # default
 MAKE_VERSION := 3.81
 # environment
 USER = bowtiemay
 # makefile
-.DEFAULT_GOAL := 
+.DEFAULT_GOAL := all
+# makefile (from `Makefile', line 24)
+INCLUDE := include
+# makefile (from `Makefile', line 39)
+SOURCEDIRS := src
 # environment
-TERM_SESSION_ID = C3C01E36-E9E0-4DE3-94AA-B1F31BB76232
+TERM_SESSION_ID = C1C02D56-3453-4793-A5D6-64F64FD4664F
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
+# makefile (from `Makefile', line 15)
+LFLAGS = 
 # environment
 CONDA_SHLVL = 1
 # default
@@ -120,12 +149,16 @@ MFLAGS = -Rrqp
 *D = $(patsubst %/,%,$(dir $*))
 # environment
 TERM_PROGRAM_VERSION = 445
+# makefile (from `Makefile', line 38)
+MAIN := main
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.272848.272854.56274E70-B2C5-4E2B-B0C9-5A3E969A4306
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.272848.272854.B1694266-91D0-4EFC-8D94-4105240A6CB1
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
 +F = $(notdir $+)
+# makefile (from `Makefile', line 18)
+OUTPUT := output
 # environment
 __CF_USER_TEXT_ENCODING = 0x1F5:0x0:0x0
 # environment
@@ -134,10 +167,14 @@ COMMAND_MODE = unix2003
 MAKEFILES := 
 # automatic
 <F = $(notdir $<)
+# makefile (from `Makefile', line 7)
+CXX = g++
 # environment
 LC_ALL = C
 # environment
 CONDA_PYTHON_EXE = /Users/bowtiemay/miniforge3/bin/python
+# makefile (from `Makefile', line 51)
+LIBS := -Llib
 # automatic
 ^F = $(notdir $^)
 # default
@@ -148,6 +185,8 @@ _CE_M =
 .INCLUDE_DIRS = /usr/local/include
 # environment
 MAKELEVEL := 0
+# makefile (from `Makefile', line 57)
+OBJECTS := src/main.o
 # environment
 CONDA_PREFIX = /Users/bowtiemay/miniforge3
 # environment
@@ -159,7 +198,7 @@ _CE_CONDA =
 # environment
 LANG = C
 # variable set hash-table stats:
-# Load=72/1024=7%, Rehash=0, Collisions=2/93=2%
+# Load=91/1024=9%, Rehash=0, Collisions=4/138=3%
 
 # Pattern-specific Variable Values
 
@@ -167,9 +206,10 @@ LANG = C
 
 # Directories
 
-# . (device 16777231, inode 2417006): 7 files, no impossibilities.
+# . (device 16777231, inode 2463357): 8 files, no impossibilities.
+# src (device 16777231, inode 2463426): 3 files, no impossibilities.
 
-# 7 files, no impossibilities in 1 directories.
+# 11 files, no impossibilities in 2 directories.
 
 # Implicit Rules
 
@@ -177,9 +217,24 @@ LANG = C
 
 # Files
 
-# Not a target:
-all:
+all: output main
 #  Command-line target.
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 68):
+	@echo Executing 'all' complete!
+	
+
+.PHONY: clean
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/main.o:
 #  Implicit rule search has been done.
 #  File does not exist.
 #  File has not been updated.
@@ -194,21 +249,10 @@ all:
 
 # Not a target:
 Makefile:
-#  A default, MAKEFILES, or -include/sinclude makefile.
 #  Implicit rule search has been done.
-#  File does not exist.
+#  Last modified 2022-08-03 09:43:04
 #  File has been updated.
-#  Failed to be updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-# Not a target:
-makefile:
-#  A default, MAKEFILES, or -include/sinclude makefile.
-#  Implicit rule search has been done.
-#  File does not exist.
-#  File has been updated.
-#  Failed to be updated.
+#  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
@@ -218,29 +262,66 @@ makefile:
 #  Modification time never checked.
 #  File has not been updated.
 
-# Not a target:
-GNUmakefile:
-#  A default, MAKEFILES, or -include/sinclude makefile.
-#  Implicit rule search has been done.
+run: all
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 90):
+	./$(OUTPUTMAIN)
+	@echo Executing 'run: all' complete!
+	
+
+.cpp.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 81):
+	$(CXX) $(CXXFLAGS) $(INCLUDES) -c $<  -o $@
+	
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
 #  File does not exist.
-#  File has been updated.
-#  Failed to be updated.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 85):
+	$(RM) $(OUTPUTMAIN)
+	$(RM) $(call FIXPATH,$(OBJECTS))
+	@echo Cleanup complete!
+	
+
+main: src/main.o
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 74):
+	$(CXX) $(CXXFLAGS) $(INCLUDES) -o $(OUTPUTMAIN) $(OBJECTS) $(LFLAGS) $(LIBS)
+	
+
+output:
+#  Implicit rule search has not been done.
+#  Last modified 2022-08-03 09:43:04
+#  File has been updated.
+#  Successfully updated.
+#  commands to execute (from `Makefile', line 71):
+	$(MD) $(OUTPUT)
+	
 
 # files hash-table stats:
-# Load=6/1024=1%, Rehash=0, Collisions=0/17=0%
+# Load=11/1024=1%, Rehash=0, Collisions=0/29=0%
 # VPATH Search Paths
 
 # No `vpath' search paths.
 
 # No general (`VPATH' variable) search path.
 
-# # of strings in strcache: 0
-# # of strcache buffers: 0
-# strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
-# strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
+# # of strings in strcache: 1
+# # of strcache buffers: 1
+# strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
+# strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Wed Aug  3 09:42:35 2022
+# Finished Make data base on Wed Aug  3 15:10:53 2022
 
  
