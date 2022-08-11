@@ -7,23 +7,21 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 
 # This program built for i386-apple-darwin11.3.0
  
-make: *** No rule to make target `src/main.o', needed by `main'.  Stop.
+make: *** No rule to make target `src/dblstk.o', needed by `main'.  Stop.
 
 
-# Make data base, printed on Wed Aug  3 15:10:53 2022
+# Make data base, printed on Wed Aug 10 22:46:29 2022
 
 # Variables
 
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
+ 
 # automatic
 ?F = $(notdir $?)
-# environment
-ELECTRON_NO_ATTACH_CONSOLE = 1
 # makefile (from `Makefile', line 21)
 SRC := src
 # automatic
- 
 ?D = $(patsubst %/,%,$(dir $?))
 # makefile (from `Makefile', line 48)
 INCLUDES := -Iinclude
@@ -44,15 +42,15 @@ _ = /usr/bin/make
 # makefile (from `Makefile', line 1)
 MAKEFILE_LIST :=  Makefile
 # makefile (from `Makefile', line 54)
-SOURCES := src/main.cpp
+SOURCES := src/dblstk.cpp src/stack_driver.cpp
 # makefile (from `Makefile', line 10)
 CXXFLAGS := -std=c++17 -Wall -Wextra -g
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
-VSCODE_CWD = /Users/bowtiemay/Desktop/prjs/CPP-Programming
+VSCODE_CWD = /
 # environment
-PATH = /Users/bowtiemay/miniforge3/bin:/Users/bowtiemay/miniforge3/condabin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+PATH = /Users/bowtiemay/miniforge3/bin:/Users/bowtiemay/miniforge3/condabin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin
 # makefile (from `Makefile', line 44)
 MD := mkdir -p
 # makefile (from `Makefile', line 41)
@@ -64,7 +62,7 @@ LIB := lib
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.ojk0lWZGru/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.NNl31O3L4p/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -80,9 +78,7 @@ VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
 HOME = /Users/bowtiemay
 # default
-MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
-# environment
-VSCODE_CLI = 1
+MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
 # environment
 VSCODE_CODE_CACHE_PATH = /Users/bowtiemay/Library/Application Support/Code/CachedData/3b889b090b5ad5793f524b5d1d39fda662b96a2a
 # environment
@@ -106,7 +102,7 @@ MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
 # environment
-SHLVL = 3
+SHLVL = 1
 # makefile (from `Makefile', line 42)
 FIXPATH = $1
 # default
@@ -119,8 +115,6 @@ USER = bowtiemay
 INCLUDE := include
 # makefile (from `Makefile', line 39)
 SOURCEDIRS := src
-# environment
-TERM_SESSION_ID = C1C02D56-3453-4793-A5D6-64F64FD4664F
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # makefile (from `Makefile', line 15)
@@ -128,9 +122,7 @@ LFLAGS =
 # environment
 CONDA_SHLVL = 1
 # default
-MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
-# environment
-TERM_PROGRAM = Apple_Terminal
+MAKE_COMMAND := /Applications/Xcode.app/Contents/Developer/usr/bin/make
 # default
 .VARIABLES := 
 # environment
@@ -147,12 +139,10 @@ MAKEFLAGS = Rrqp
 MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
-# environment
-TERM_PROGRAM_VERSION = 445
 # makefile (from `Makefile', line 38)
 MAIN := main
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.272848.272854.B1694266-91D0-4EFC-8D94-4105240A6CB1
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.272848.272854
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
@@ -164,6 +154,7 @@ __CF_USER_TEXT_ENCODING = 0x1F5:0x0:0x0
 # environment
 COMMAND_MODE = unix2003
 # default
+ 
 MAKEFILES := 
 # automatic
 <F = $(notdir $<)
@@ -186,19 +177,17 @@ _CE_M =
 # environment
 MAKELEVEL := 0
 # makefile (from `Makefile', line 57)
-OBJECTS := src/main.o
+OBJECTS := src/dblstk.o src/stack_driver.o
 # environment
 CONDA_PREFIX = /Users/bowtiemay/miniforge3
 # environment
-TERM = xterm-256color
-# environment
-VSCODE_PID = 2993
+VSCODE_PID = 1348
 # environment
 _CE_CONDA = 
 # environment
 LANG = C
 # variable set hash-table stats:
-# Load=91/1024=9%, Rehash=0, Collisions=4/138=3%
+# Load=85/1024=8%, Rehash=0, Collisions=4/132=3%
 
 # Pattern-specific Variable Values
 
@@ -206,10 +195,10 @@ LANG = C
 
 # Directories
 
-# . (device 16777231, inode 2463357): 8 files, no impossibilities.
-# src (device 16777231, inode 2463426): 3 files, no impossibilities.
+# . (device 16777230, inode 2463357): 8 files, no impossibilities.
+# src (device 16777230, inode 2463426): 5 files, no impossibilities.
 
-# 11 files, no impossibilities in 2 directories.
+# 13 files, no impossibilities in 2 directories.
 
 # Implicit Rules
 
@@ -228,13 +217,19 @@ all: output main
 	@echo Executing 'all' complete!
 	
 
+# Not a target:
+src/stack_driver.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
 .PHONY: clean
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
 # Not a target:
-src/main.o:
+src/dblstk.o:
 #  Implicit rule search has been done.
 #  File does not exist.
 #  File has not been updated.
@@ -250,7 +245,7 @@ src/main.o:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-03 09:43:04
+#  Last modified 2022-08-02 23:43:04
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -290,7 +285,7 @@ clean:
 	@echo Cleanup complete!
 	
 
-main: src/main.o
+main: src/dblstk.o src/stack_driver.o
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
@@ -302,7 +297,7 @@ main: src/main.o
 
 output:
 #  Implicit rule search has not been done.
-#  Last modified 2022-08-03 09:43:04
+#  Last modified 2022-08-02 23:43:04
 #  File has been updated.
 #  Successfully updated.
 #  commands to execute (from `Makefile', line 71):
@@ -310,7 +305,7 @@ output:
 	
 
 # files hash-table stats:
-# Load=11/1024=1%, Rehash=0, Collisions=0/29=0%
+# Load=12/1024=1%, Rehash=0, Collisions=0/31=0%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -322,6 +317,6 @@ output:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Wed Aug  3 15:10:53 2022
+# Finished Make data base on Wed Aug 10 22:46:29 2022
 
  
